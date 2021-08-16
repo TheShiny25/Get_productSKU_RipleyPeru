@@ -12,9 +12,13 @@
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
         <link href="assets/css/style.css" rel="stylesheet">
+        <style>
+        
+        </style>
     </mini-site-styles>
 </head>
 <body>
+    <mini-site>
     <section id="carrusel-productos-peru">
         <div class="container">
             <div class="titulo">
@@ -22,6 +26,17 @@
             </div>
             <div id="list_product_sku" class="swiper-container mySwiper">
                 <div class="swiper-wrapper">
+                    <!--<div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2004226894137P"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2065254641957P"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2003253645675P"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2064256876527P"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2022272392254P"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="PMP00001080335"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="PMP00001389137"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="406516"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="PMP00000378205"></div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="PMP00000843997"></div>-->
+
                     <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2032230170299P">
                         <a href="#" target="_top">
                             <span class="wrap-porcent-desct">20%</span>
@@ -33,7 +48,7 @@
                                     QUEIROLO PRIMADO 750ML
                                 </p>
                                 
-                                <span class="wrap-price-aon best-price"><span class="">S/ 159.95</span></span>
+                                <span class="wrap-price-aon best-price"><span class="aon">S/ 159.95</span></span>
                                 <span class="wrap-price-oferta">Oferta: <span class="pre_internet">S/ 159.95</span></span>
                                 <span class="wrap-price-normal">Antes: <span class="pre_normal">S/ 159.95</span></span>
                                 
@@ -121,7 +136,43 @@
                         <a href="#" target="_top">
                             <div class="wrap-img">
                                 <span class="wrap-porcent-desct">20%</span>
+                                <img class="img-responsive" src="https://svcimg.ripley.com.pe/imagenes-sellers-mercado-ripley/2021/03/12171829/1500X1500.jpg" alt="" style="width: 100%;">
+                            </div>
+                            <div class="wrap-infoPro">
+                                <p class="wrap-description">
+                                    QUEIROLO PRIMADO 750ML
+                                </p>
+                                
+                                <span class="wrap-price-aon best-price">S/ 159.95</span>
+                                <span class="wrap-price-oferta">Oferta: S/ 159.95</span>
+                                <span class="wrap-price-normal">Antes: S/ 159.95</span>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2032230170299P">
+                        <a href="#" target="_top">
+                            <div class="wrap-img">
+                                <span class="wrap-porcent-desct">20%</span>
                                 <img class="img-responsive" src="https://svcimg.ripley.com.pe/2020/05/05225535/CHA0163_0.jpg" alt="" style="width: 100%;">
+                            </div>
+                            <div class="wrap-infoPro">
+                                <p class="wrap-description">
+                                    QUEIROLO PRIMADO 750ML
+                                </p>
+                                
+                                <span class="wrap-price-aon best-price">S/ 159.95</span>
+                                <span class="wrap-price-oferta">Oferta: S/ 159.95</span>
+                                <span class="wrap-price-normal">Antes: S/ 159.95</span>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 skuProductApi swiper-slide" data-prod-sku="2032230170299P">
+                        <a href="#" target="_top">
+                            <div class="wrap-img">
+                                <span class="wrap-porcent-desct">20%</span>
+                                <img class="img-responsive" src="https://svcimg.ripley.com.pe/imagenes-sellers-mercado-ripley/2021/03/12171829/1500X1500.jpg" alt="" style="width: 100%;">
                             </div>
                             <div class="wrap-infoPro">
                                 <p class="wrap-description">
@@ -149,56 +200,14 @@
             
         </div>
     </section>
-    
+</mini-site>
 </body>
+<mini-site-scripts>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/"></script>
+    <script src="assets/js/productsku.js"></script>
     <script>
-        var swiper = new Swiper("#list_product_sku", {
-            /*effect: "coverflow",*/
-            spaceBetween: 0,
-            centeredSlides: false,
-            slidesPerView: 6,
-            loop: false,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next.swiper-next1",
-                prevEl: ".swiper-button-prev.swiper-prev1",
-            },
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 0,
-                },
-                // when window width is >= 480px
-
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 0,
-                },
-                // when window width is >= 640px
-                640: {
-                    slidesPerView: 4,
-                    spaceBetween: 0,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 0,
-                },
-                1024: {
-                    slidesPerView: 6,
-                    spaceBetween: 0,
-                },
-            },
-        });
+       
     </script>
+</mini-site-scripts>
 </html>
