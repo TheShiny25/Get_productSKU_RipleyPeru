@@ -15,5 +15,8 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.50.0",
     "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "swiper": "^6.8.2"
   }
 }
