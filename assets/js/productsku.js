@@ -1,5 +1,5 @@
 const eject_swiper = () => {
-  var swiper = new Swiper("#list_product_sku", {
+  var swiper = new Swiper(document.getElementById('list_product_sku'), {
     /*effect: "coverflow",*/
     spaceBetween: 0,
     centeredSlides: false,
@@ -139,7 +139,8 @@ const list_product = () => {
                             </div>
                         </a>`;
 
-      document.getElementsByClassName("skuProductApi")[index].innerHTML = productInfo;
+      document.getElementsByClassName("skuProductApi")[index].innerHTML =
+        productInfo;
       productInsertado += 1;
       /*aca generaremos un while para ejecutar una function*/
       console.log("Producto Insertado - Sku: " + productInsertado);
@@ -157,4 +158,5 @@ const list_product = () => {
   }
 };
 
-list_product();
+/*list_product();*/
+eject_swiper();

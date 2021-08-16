@@ -1,9 +1,9 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.min.css';
 import "../assets/css/style.css";
 
 const eject_swiper = () => {
-  var swiper = new Swiper(document.getElementById("list_product_sku"), {
+  var swiper = new Swiper(document.getElementById('list_product_sku'), {
     /*effect: "coverflow",*/
     spaceBetween: 0,
     centeredSlides: false,
@@ -145,14 +145,13 @@ const list_product = () => {
   
         document.getElementsByClassName("skuProductApi")[index].innerHTML = productInfo;
         productInsertado += 1;
-        /*aca generaremos un while para ejecutar una function*/
         console.log("Producto Insertado - Sku: " + productInsertado);
         if (productInsertado == cantProductSku) {
           console.log("Ejecutar Carrusel -->");
           setTimeout(function () {
             eject_swiper();
           }, 1200);
-          console.log("carrusel Ejecutado - webpack");
+          console.log("carrusel Ejecutado - webpack menor peso v2");
         }
       });
       console.log("cantidad de productos - Sku: " + cantProductSku);
@@ -162,3 +161,4 @@ const list_product = () => {
   };
   
   list_product();
+  
