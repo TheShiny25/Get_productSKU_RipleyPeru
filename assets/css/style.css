@@ -1,13 +1,13 @@
 /* font converted using font-converter.net. thank you! */
 @font-face {
   font-family: "Gotham-Bold";
-  src: url("../css/Gotham-Bold.eot"); /* IE9 Compat Modes */
-  src: url("../css/Gotham-Bold.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../css/Gotham-Bold.otf") format("opentype"),
-    /* Open Type Font */ url("../css/Gotham-Bold.svg") format("svg"),
-    /* Legacy iOS */ url("../css/Gotham-Bold.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../css/Gotham-Bold.woff") format("woff"),
-    /* Modern Browsers */ url("../css/Gotham-Bold.woff2") format("woff2"); /* Modern Browsers */
+  src: url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Bold.eot"); /* IE9 Compat Modes */
+  src: url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Bold.otf") format("opentype"),
+    /* Open Type Font */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Bold.svg") format("svg"),
+    /* Legacy iOS */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Bold.woff2") format("woff2"); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
@@ -15,13 +15,13 @@
 /* font converted using font-converter.net. thank you! */
 @font-face {
   font-family: "Gotham-Book";
-  src: url("../css/Gotham-Book.eot"); /* IE9 Compat Modes */
-  src: url("../css/Gotham-Book.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("../css/Gotham-Book.otf") format("opentype"),
-    /* Open Type Font */ url("../css/Gotham-Book.svg") format("svg"),
-    /* Legacy iOS */ url("../css/Gotham-Book.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("../css/Gotham-Book.woff") format("woff"),
-    /* Modern Browsers */ url("../css/Gotham-Book.woff2") format("woff2"); /* Modern Browsers */
+  src: url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Book.eot"); /* IE9 Compat Modes */
+  src: url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Book.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Book.otf") format("opentype"),
+    /* Open Type Font */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Book.svg") format("svg"),
+    /* Legacy iOS */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Book.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Book.woff") format("woff"),
+    /* Modern Browsers */ url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/css/Gotham-Book.woff2") format("woff2"); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
@@ -56,6 +56,10 @@
     padding: 0;
     box-sizing: border-box;
 }*/
+
+#list_product_sku .swiper-slide{
+  width:16.66%;
+}
 #list_product_sku .skuProductApi a{
     border:2px solid #DC3B51;
     display: block;
@@ -112,12 +116,13 @@
     background-color: #DC3B51;
     color: #ffffff;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 23px;
     border-radius: 0px 20px 20px 20px;
     margin: 4% 0;
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .wrap-description {
@@ -156,13 +161,16 @@
 }
 
 .wrap-price-aon span.aon::after {
-  background: url("../img/AON.svg") left bottom 0 no-repeat;
+  background: url("https://home.ripley.com.pe/minisitios/home/recursos/api-sku/img/TR.svg") left bottom 0 no-repeat;
   content: "";
-  display: inline-block;
-  width: 22px;
-  height: 18px;
-  margin-left: 4px;
-  margin-bottom: -3px;
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  right: -25px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .wrap-comprar {

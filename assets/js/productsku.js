@@ -1,5 +1,5 @@
 const eject_swiper = () => {
-  var swiper = new Swiper("#list_product_sku", {
+  var swiper = new Swiper(document.getElementById('list_product_sku'), {
     /*effect: "coverflow",*/
     spaceBetween: 0,
     centeredSlides: false,
