@@ -158,4 +158,9 @@ const list_product = () => {
   }
 };
 
+<<<<<<< HEAD
 list_product();
+=======
+/*list_product();*/
+eject_swiper();
+>>>>>>> frontend
