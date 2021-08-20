@@ -72,6 +72,8 @@
   background-color: #ffffff;
   position: relative;
   min-height: 215px;
+  max-height: 216px;
+  height: 216px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -79,20 +81,25 @@
   justify-content: center;
   align-items: center;
 }
+.wrap-img img{
+  max-height: 100%;
+  width: auto;
+}
 
 .wrap-porcent-desct {
   font-family: "Gotham-Book";
   position: absolute;
   float: left;
   display: block;
-  left: 0;
+  left: -1px;
+  top: -1px;
   background-color: #DC3B51;
   color: #ffffff;
   font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 0 100px 0;
-  width: 65px;
-  height: 40px;
+  font-size: 16px;
+  border-radius: 0 0 100% 0;
+  width: 60px;
+  height: 45px;
   padding: 1.5% 3%;
   z-index: 999;
 }
@@ -127,7 +134,7 @@
 
 .wrap-description {
     margin: 2% 0;
-    font-size: 12px;
+    font-size: 10.5px;
     text-align: center;
     padding: 0 5%;
     min-height: 55px;
@@ -146,6 +153,7 @@
   display: block;
   width: 100%;
   min-height: 22px;
+  text-align: center;
 }
 .wrap-price-normal{
     font-size: 12px;
@@ -215,5 +223,71 @@ a:focus {
   color: #000000;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1024px) {
+  #list_product_sku .swiper-slide{
+    width:25%;
+  }
+  .wrap-img{
+    min-height: 150px;
+    height:150px
+  }
+  .wrap-description{
+    font-size: 10px;
+  }
+  .wrap-infoPro .best-price{
+    font-size: 18px;
+  }
+  .wrap-price-oferta{
+    font-size: 14px;
+  }
 }
+@media screen and (max-width: 767px) {
+  #list_product_sku .swiper-slide{
+    width:33.33%;
+  }
+}
+@media screen and (max-width: 639px) {
+  #list_product_sku .swiper-slide{
+    width:50%;
+  }
+}
+/**/
+
+@media screen and (max-width: 768px) {
+  .wrap-img{
+    min-height: 173px;
+    max-height: 173px;
+    height: 173px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrap-img img{
+    max-height: 100%;
+    width: auto;
+  }
+  .wrap-description{
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .wrap-description{
+    font-size: 2vw;
+    min-height: 40px;
+  }
+  .wrap-infoPro .best-price{
+    font-size: 4vw;
+    width:55%;
+    height:35px;
+  }
+  .wrap-price-oferta{
+    font-size: 3vw;
+  }
+  .wrap-price-normal{
+    font-size: 2.5vw;
+  }
+}
+
+

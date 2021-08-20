@@ -35,13 +35,15 @@ const eject_swiper = () => {
       },
       // when window width is >= 640px
       640: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 0,
       },
+      // when window width is >= 768px
       768: {
         slidesPerView: 4,
         spaceBetween: 0,
       },
+      // when window width is >= 1024px
       1024: {
         slidesPerView: 6,
         spaceBetween: 0,
@@ -52,14 +54,15 @@ const eject_swiper = () => {
 
 const list_product = () => {
     try {
-      let apiProUrl = "https://simple.ripley.com.pe/api/products/";
+      /*let apiProUrl = "https://simple.ripley.com.pe/api/products/";*/
+      let apiProUrl = "https://staging.ripley.com.pe/api/products/";
       let infoProduct = document.querySelectorAll(".skuProductApi");
       let cantProductSku = infoProduct.length;
       let productInsertado = 0;
       infoProduct.forEach(async (button, index) => {
         let productSKU = button.getAttribute("data-prod-sku");
         let response = await fetch(
-          `https://simple.ripley.com.pe/api/products/${productSKU}`
+          `https://staging.ripley.com.pe/api/products/${productSKU}`
         );
         let data = await response.json();
         let productInfo = "";
@@ -122,7 +125,7 @@ const list_product = () => {
                                     : ``
                                 }
                               <div class="wrap-img">
-                                  <img class="img-responsive" src="${imagenThumbnail}" alt="" style="width: 100%;">
+                                  <img loading="lazy" class="lazyload" data-src="${imagenThumbnail}" alt="">
                               </div>
                               <div class="wrap-infoPro">
                                   <p class="wrap-description">
