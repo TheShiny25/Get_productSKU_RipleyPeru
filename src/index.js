@@ -61,6 +61,7 @@ const list_product = () => {
       let productInsertado = 0;
       infoProduct.forEach(async (button, index) => {
         let productSKU = button.getAttribute("data-prod-sku");
+        let productImg_Pro = parseInt(button.getAttribute('data-pro-pos_img'));
         let response = await fetch(
           `https://staging.ripley.com.pe/api/products/${productSKU}`
         );
@@ -91,11 +92,13 @@ const list_product = () => {
   
         const imagenThumbnail = String(data.thumbnailImage);
         const imagenCompleta = String(data.fullImage);
+        const imagePosition = data.images;
   
         const esMarketplace = Boolean(data.isMarketplaceProduct);
         const esSinStock = Boolean(data.isOutOfStock);
         const esNoDisponible = Boolean(data.isUnavailable);
-  
+      
+
         /*console.log(idCorta);
           console.log(idLarga);
           console.log(nombreProducto);
@@ -125,7 +128,10 @@ const list_product = () => {
                                     : ``
                                 }
                               <div class="wrap-img">
-                                  <img loading="lazy" class="lazyload" data-src="${imagenThumbnail}" alt="">
+                                ${productImg_Pro != 0
+                                  ?`<img loading="lazy" class="lazyload" data-src="${String(imagePosition[productImg_Pro])}" alt="">`
+                                  :`<img loading="lazy" class="lazyload" data-src="${imagenThumbnail}" alt="">`
+                                }
                               </div>
                               <div class="wrap-infoPro">
                                   <p class="wrap-description">
@@ -148,16 +154,16 @@ const list_product = () => {
   
         document.getElementsByClassName("skuProductApi")[index].innerHTML = productInfo;
         productInsertado += 1;
-        console.log("Producto Insertado - Sku: " + productInsertado);
+        /*console.log("Producto Insertado - Sku: " + productInsertado);*/
         if (productInsertado == cantProductSku) {
-          console.log("Ejecutar Carrusel -->");
+          /*console.log("Ejecutar Carrusel -->");*/
           setTimeout(function () {
             eject_swiper();
           }, 1200);
-          console.log("carrusel Ejecutado - webpack menor peso v2");
+          /*console.log("carrusel Ejecutado - webpack menor peso v2");*/
         }
       });
-      console.log("cantidad de productos - Sku: " + cantProductSku);
+      /*console.log("cantidad de productos - Sku: " + cantProductSku);*/
     } catch (error) {
       console.log("Error ==> ", error);
     }
